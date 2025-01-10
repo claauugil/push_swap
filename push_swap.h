@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 17:00:55 by claudia           #+#    #+#             */
-/*   Updated: 2025/01/09 18:43:38 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/10 13:21:11 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,8 @@ void	rrr(t_stack *a, t_stack *b);
 void	sa(t_stack *a);
 void	sort(t_stack *a, t_stack *b);
 int		max(int a, int b);
-void	print_error(void);
+void	print_error_exit(t_stack *stack_a, t_stack *stack_b);
+//void	print_error(void);
 int		is_biggest(t_stack *in_stack, int n);
 int		is_smallest(t_stack *in_stack, int n);
 int		find_biggest(t_stack *to_find);
@@ -84,7 +85,7 @@ void	sort_three(t_stack *a);
 void	push_back(t_stack *b, t_stack *a);
 int		find_near_lower(t_stack *search, int n);
 int		find_near_upper(t_stack *to_search, int target);
-int		get_target(t_stack *search, int n, int up_low);
+int		get_target(t_stack *search, int n);
 int		search_dups(t_stack *stack);
 int		empty_string(char *str);
 int		check_errors(int argc, char **argv);

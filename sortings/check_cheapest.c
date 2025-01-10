@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 17:19:49 by claudia           #+#    #+#             */
-/*   Updated: 2025/01/09 18:05:35 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/10 13:03:05 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	get_combined_moves(t_stack *from, t_stack *to, int value)
 	int	target_depth;
 
 	f_depth = get_depth(from, value);
-	target = get_target(to, value, 1);
+	target = get_target(to, value);
 	target_depth = get_depth(to, target);
 	return (calculate_combined_moves(f_depth, target_depth));
 }

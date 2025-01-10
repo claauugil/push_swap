@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 17:21:39 by claudia           #+#    #+#             */
-/*   Updated: 2025/01/09 18:04:44 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/10 14:17:22 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,8 @@ void	rotates(t_stack *from, t_stack *to, int *val_depth, int *tar_depth)
 
 void	rotate_each(t_stack *from, int *val_depth, t_stack *to, int *tar_depth)
 {
-	if (*val_depth != 0)
-    			rotate_f_t(from, val_depth);
-    if (*tar_depth != 0)
-        rotate_tgt_to(to, tar_depth);
+	rotate_f_t(from, val_depth);
+	rotate_tgt_to(to, tar_depth);
 }
 
 int	push_cheapest(t_stack *from, t_stack *to, int val)
@@ -71,7 +69,7 @@ int	push_cheapest(t_stack *from, t_stack *to, int val)
 	int	target_depth;
 
 	val_depth = get_depth(from, val);
-	target = get_target(to, val, 1);
+	target = get_target(to, val);
 	target_depth = get_depth(to, target);
 	while (val_depth != 0 || target_depth != 0)
 	{

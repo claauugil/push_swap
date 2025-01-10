@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 17:07:44 by claudia           #+#    #+#             */
-/*   Updated: 2025/01/09 18:09:43 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/10 12:54:22 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,12 @@ int	empty_string(char *str)
 	return (1);
 }
 
-void	print_error(t_stack *a, t_stack *b)
+void	print_error_exit(t_stack *stack_a, t_stack *stack_b)
 {
-	if (*a)
-		free
+	if (stack_a)
+		free(stack_a);
+	if (stack_a)
+		free(stack_b);
 	write(2, "Error\n", 6);
 	exit(1);
 }

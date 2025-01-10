@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 17:06:06 by claudia           #+#    #+#             */
-/*   Updated: 2025/01/09 17:39:51 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/10 12:54:52 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ int	main(int ac, char *av[])
 	t_stack	*stack_b;
 
 	if (scan_error(ac, av))
-		print_error();
+		print_error_exit(NULL, NULL);
 	stack_a = create_stack();
 	stack_b = create_stack();
 	if (!stack_a || !stack_b)
-		print_error();
+		print_error_exit(stack_a, stack_a);
 	init_stack(ac, av, stack_a);
 	if (search_dups(stack_a))
-		print_error();
+		print_error_exit(stack_a, stack_b);
 	if (!is_sorted(stack_a))
 		sort(stack_a, stack_b);
 	free_stack(stack_a);
