@@ -29,7 +29,7 @@ t_stack	*create_stack(void)
 {
 	t_stack	*stack;
 
-	stack = malloc(sizeof(stack));
+	stack = malloc(sizeof(t_stack));
 	if (!stack)
 		return (NULL);
 	stack->top = NULL;

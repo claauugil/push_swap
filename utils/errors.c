@@ -46,8 +46,10 @@ int	empty_string(char *str)
 	return (1);
 }
 
-void	print_error(void)
+void	print_error(t_stack *a, t_stack *b)
 {
+	if (*a)
+		free
 	write(2, "Error\n", 6);
 	exit(1);
 }
