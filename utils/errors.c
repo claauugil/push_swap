@@ -50,7 +50,7 @@ void	print_error_exit(t_stack *stack_a, t_stack *stack_b)
 {
 	if (stack_a)
 		free(stack_a);
-	if (stack_a)
+	if (stack_b)
 		free(stack_b);
 	write(2, "Error\n", 6);
 	exit(1);

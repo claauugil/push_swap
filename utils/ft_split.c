@@ -50,14 +50,6 @@ void	free_split(char **split)
 	free(split);
 }
 
-/*void	free_split(int position, char **matrix)
-{
-	while (position >= 0)
-	{
-		free(matrix[position--]);
-	}
-	free(matrix);
-}*/
 static char	**fill_matrix(const char *s, char delimiter, char **matrix)
 {
 	int	i;
