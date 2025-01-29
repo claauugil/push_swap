@@ -57,7 +57,7 @@ int	check_cheapest(t_stack *from, t_stack *to)
 	int		combined_moves;
 
 	actual = from->top;
-	actual_moves = INT_MAX;   
+	actual_moves = INT_MAX;
 	cheapest_val = INT_MIN;
 	while (actual)
 	{

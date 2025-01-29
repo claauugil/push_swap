@@ -17,7 +17,7 @@ int	scan_error(int ac, char *av[])
 	if (ac > 1 && empty_string(av[1]))
 		return (1);
 	if (ac == 1)
-		return (1);
+		exit(EXIT_FAILURE);
 	if (!validate_input(ac, av))
 		return (1);
 	return (0);
